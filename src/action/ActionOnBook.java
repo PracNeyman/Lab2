@@ -27,7 +27,7 @@ public class ActionOnBook extends ActionSupport{
 			bookTmp.setPrice(resultSet.getDouble("price"));
 			bookList.add(bookTmp);
 			
-			//这里是为了Git实验而进行的操作
+			//这里是为了Git实验而进行的操作啊
 		}
 		resultSet.close();
 	}
