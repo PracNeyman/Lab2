@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+    <package name="default"  extends="struts-default">
+    
+    	<action name="queryByAuthorID" class="action.ActionOnDemand" method="retrieveByID">
+    		<result name="success">/byAuthorID.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="queryByName" class="action.ActionOnDemand" method="findTitleByAuthorName">
+    		<result  name="success">/queryByAuthor.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="removeBookByISBN" class="action.ActionOnDemand" method="removeBook">
+    		<result name="success">removeBook.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="updatingBook" class="action.ActionOnDemand" method="findBookAndAuthorByISBN">	
+    		<result name="success">updatingBook.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="findBookAndAuthorByISBN" class="action.ActionOnDemand" method="findBookAndAuthorByISBN">
+    		<result name="success">/bookAndAuthorDetail.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="update" class="action.ActionOnDemand" method="update">
+    		<result name="success">/updatedBook.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="queryAuthorByName" class="action.ActionOnDemand" method="findTitleByAuthorName">
+    		<result name="success">selectAuthor.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="addAuthor" class="action.ActionOnDemand" method="insertAuthor">
+    		<result name="success">addBook.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="addBook" class="action.ActionOnDemand" method="insertBook">
+    		<result name="success">addedBook.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+    	<action name="queryByTitle" class="action.ActionOnDemand" method="retrieveByTitle">
+    		<result name="success">queryByTitle.jsp</result>
+    		<result name="error">/msg.jsp</result>
+    	</action>
+    	
+        <action name="register" class="action.TestAction" method="excute">
+            <result name="SUCCESS">/01.html</result>
+            <result name="error">/msg.jsp</result>
+        </action>
+        
+        
+    </package>
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
