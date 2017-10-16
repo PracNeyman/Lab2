@@ -26,6 +26,8 @@ public class ActionOnBook extends ActionSupport{
 			bookTmp.setPublishDate(resultSet.getString("publishDate"));
 			bookTmp.setPrice(resultSet.getDouble("price"));
 			bookList.add(bookTmp);
+			
+			//这里是为了Git实验而进行的操作
 		}
 		resultSet.close();
 	}
